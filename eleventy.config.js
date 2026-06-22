@@ -1,4 +1,11 @@
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+
 module.exports = function (eleventyConfig) {
+  // Rewrites root-absolute hrefs/srcs in the output HTML to respect the
+  // pathPrefix. Locally pathPrefix is "/", so nothing changes; in CI we pass
+  // --pathprefix=/we-diary/ so the GitHub Pages project subpath resolves.
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
   // Copy static assets straight through to the built site.
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
