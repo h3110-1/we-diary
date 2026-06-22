@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+---
+<section class="intro">
+  <h1 class="intro-title">{{ site.title }}</h1>
+  <p class="intro-tagline">{{ site.tagline }}</p>
+</section>
+
+<section class="recent">
+  <h2 class="section-title">Latest entries</h2>
+  {% set posts = collections.posts %}
+  {% include "postslist.njk" %}
+</section>

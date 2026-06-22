@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+---
+<article class="post">
+  <header class="post-header">
+    <p class="eyebrow">
+      <a href="/archive/">Diary</a>
+    </p>
+    <h1 class="post-title">{{ title }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time>
+      <span aria-hidden="true">·</span>
+      {{ content | readingTime }} min read
+    </p>
+    {% set shown = tags | topicTags %}
+    {% if shown.length %}
+      <ul class="tag-list">
+        {% for tag in shown %}<li class="tag">#{{ tag }}</li>{% endfor %}
+      </ul>
+    {% endif %}
+  </header>
+
+  <div class="prose">
+    {{ content | safe }}
+  </div>
+
+  <footer class="post-footer">
+    <a class="back-link" href="/archive/">← All entries</a>
+  </footer>
+</article>

@@ -1,0 +1,17 @@
+<ul class="postlist">
+  {% for post in posts %}
+    <li class="postlist-item">
+      <time class="postlist-date" datetime="{{ post.date | isoDate }}">
+        {{ post.date | readableDate }}
+      </time>
+      <div class="postlist-body">
+        <a class="postlist-link" href="{{ post.url }}">{{ post.data.title }}</a>
+        {% if post.data.description %}
+          <p class="postlist-excerpt">{{ post.data.description }}</p>
+        {% endif %}
+      </div>
+    </li>
+  {% else %}
+    <li class="postlist-empty">No entries yet. Run <code>npm run new -- "My first entry"</code>.</li>
+  {% endfor %}
+</ul>

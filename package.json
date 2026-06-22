@@ -1,0 +1,16 @@
+{
+  "name": "we-diary",
+  "version": "1.0.0",
+  "description": "A personal static blog / diary built with Eleventy. Write markdown, get a styled site.",
+  "license": "MIT",
+  "scripts": {
+    "start": "eleventy --serve --quiet",
+    "dev": "eleventy --serve --quiet",
+    "build": "eleventy",
+    "clean": "node -e \"require('fs').rmSync('_site',{recursive:true,force:true})\"",
+    "new": "node scripts/new-post.js"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

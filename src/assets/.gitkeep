@@ -1,0 +1,2 @@
+Put images and downloads here. They are copied to /assets/ on the built site.
+Reference them in markdown like: ![alt text](/assets/photo.jpg)

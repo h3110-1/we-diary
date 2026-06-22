@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+title: Archive
+permalink: /archive/
+---
+<section class="page-head">
+  <h1>Archive</h1>
+  <p class="lede">Every entry, newest first.</p>
+</section>
+
+<section class="recent">
+  {% set posts = collections.posts %}
+  {% include "postslist.njk" %}
+</section>
