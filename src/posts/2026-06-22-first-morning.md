@@ -1,5 +1,5 @@
 ---
-title: "First Morning"
+title: "First Day"
 date: 2026-06-22
 description: ""
 tags: []
@@ -12,3 +12,4 @@ i also learned how to use github and pushed my project to github, which you can 
 
 then i learned about cloudfare pages as a hosting service and i cnnected it to github in order to publish my site here:https://tenza.alexhillman2010.workers.dev
 
+then i made a multitude of quality of life changes to my app in order to refine it for real users and connected it to instamt db in order to give it a backend so the data would not be lost when the tab is closed and so i can connect accounts to add features like a friends list for shared teir lists
